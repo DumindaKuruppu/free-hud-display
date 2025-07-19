@@ -1,4 +1,4 @@
-package com.example.freehuddisplay
+package com.speed.freehuddisplay
 
 import org.junit.Test
 

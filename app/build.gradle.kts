@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.freehuddisplay"
+    namespace = "com.speed.freehuddisplay"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.freehuddisplay"
+        applicationId = "com.speed.freehuddisplay"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -26,20 +26,22 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
+
     buildFeatures {
         viewBinding = true
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -48,6 +50,11 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    // Add this for GPS location services
+    implementation(libs.play.services.location)
+    implementation(libs.androidx.activity.ktx)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
